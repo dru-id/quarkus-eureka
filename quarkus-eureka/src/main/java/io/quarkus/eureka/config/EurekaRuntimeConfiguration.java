@@ -116,7 +116,7 @@ public class EurekaRuntimeConfiguration {
     /**
      * Initial delay in seconds for health check before eureka registration
      */
-    @ConfigItem(defaultValue = "3")
+    @ConfigItem(defaultValue = "${quarkus.eureka.health-check-initial-delay:3}")
     long healthCheckInitialDelay;
 
     public static class NetworkConverter implements Converter<String> {
